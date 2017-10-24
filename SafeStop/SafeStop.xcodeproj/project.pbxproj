@@ -12,6 +12,8 @@
 		858B500E1F8F1F09001992FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B500C1F8F1F09001992FB /* Main.storyboard */; };
 		858B50101F8F1F09001992FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B500F1F8F1F09001992FB /* Assets.xcassets */; };
 		858B50131F8F1F09001992FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B50111F8F1F09001992FB /* LaunchScreen.storyboard */; };
+		858B501C1F9E6B17001992FB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858B501B1F9E6B17001992FB /* MapKit.framework */; };
+		858B501E1F9E6B70001992FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858B501D1F9E6B70001992FB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		858B500F1F8F1F09001992FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858B50121F8F1F09001992FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		858B50141F8F1F09001992FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		858B501B1F9E6B17001992FB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		858B501D1F9E6B70001992FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858B501E1F9E6B70001992FB /* CoreLocation.framework in Frameworks */,
+				858B501C1F9E6B17001992FB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				858B50071F8F1F09001992FB /* SafeStop */,
 				858B50061F8F1F09001992FB /* Products */,
+				858B501A1F9E6B17001992FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,15 @@
 				858B50141F8F1F09001992FB /* Info.plist */,
 			);
 			path = SafeStop;
+			sourceTree = "<group>";
+		};
+		858B501A1F9E6B17001992FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				858B501D1F9E6B70001992FB /* CoreLocation.framework */,
+				858B501B1F9E6B17001992FB /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +113,11 @@
 					858B50041F8F1F09001992FB = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
